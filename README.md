@@ -4,7 +4,7 @@ This project implements the **Ingestion** phase of a Retrieval-Augmented Generat
 
 ---
 
-### ## Project Structure
+### Project Structure
 
 * **`docs/`**: Folder containing your raw `.txt` source files (e.g., Google.txt, Microsoft.txt).
 * **`db/`**: The directory where the persisted ChromaDB vector store is saved.
@@ -13,7 +13,7 @@ This project implements the **Ingestion** phase of a Retrieval-Augmented Generat
 
 ---
 
-### ## Prerequisites
+### Prerequisites
 
 1.  **Python 3.10 - 3.12** (Recommended).
 2.  **Hugging Face Account**: To get a free Inference API token.
@@ -25,7 +25,7 @@ pip install langchain-community langchain-huggingface langchain-chroma python-do
 
 ---
 
-### ## Setup
+### Setup
 
 1.  **Environment Variables**:
     Create a `.env` file in the root directory:
@@ -38,7 +38,7 @@ pip install langchain-community langchain-huggingface langchain-chroma python-do
 
 ---
 
-### ## How It Works
+### How It Works
 
 1.  **Loading**: Uses `DirectoryLoader` and `TextLoader` to read all text files from the `docs/` directory.
 2.  **Splitting**: Uses `RecursiveCharacterTextSplitter` to break documents into chunks (default: **800** characters with **80** character overlap). This ensures semantic context is preserved across chunks.
@@ -49,7 +49,7 @@ pip install langchain-community langchain-huggingface langchain-chroma python-do
 
 ---
 
-### ## Usage
+### Usage
 
 Run the pipeline from your terminal:
 ```bash
@@ -60,7 +60,7 @@ Upon success, you will see a `db/` folder created in your project directory cont
 
 ---
 
-### ## Troubleshooting
+### Troubleshooting
 
 * **Import Errors**: Ensure you have installed `langchain-huggingface`. The script uses `from langchain_huggingface import HuggingFaceEndpointEmbeddings`.
 * **API Issues**: If you get a validation error, ensure the parameter used is `huggingfacehub_api_token` and that your token is valid.
