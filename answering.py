@@ -22,7 +22,8 @@ db = Chroma(
     collection_metadata = {"hnsw:space":'cosine'}
 )
 
-query = "When was tesla Roadster launched?"
+# query = "When was tesla Roadster launched?"
+query = input("Enter your query: ")
 
 retriever = db.as_retriever(search_kwargs= {"k":5})
 
